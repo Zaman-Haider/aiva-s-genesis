@@ -16,7 +16,7 @@ const Navbar = () => {
               location.pathname === "/" ? "text-primary" : "text-muted-foreground"
             }`}
           >
-            Home
+            
           </Link>
           <Link
             to="/the-story"
