@@ -26,6 +26,14 @@ const Navbar = () => {
           >
             The Story
           </Link>
+          <Link
+            to="/partner-programme"
+            className={`font-medium text-sm transition-colors hover:text-primary ${
+              location.pathname === "/partner-programme" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Partner Programme
+          </Link>
           <a
             href="#"
             className="gradient-bg text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
