@@ -7,7 +7,7 @@ const TheStory = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="gradient-hero pt-28 pb-24 px-6 relative overflow-hidden">
+      <section className="gradient-hero pt-28 pb-24 px-3 md:px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.1)_0%,_transparent_60%)]" />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-sm font-medium mb-8">
@@ -37,7 +37,7 @@ const TheStory = () => {
       </section>
 
       {/* TL;DR Banner */}
-      <section className="py-16 px-6 gradient-subtle-bg">
+      <section className="py-16 px-3 md:px-4 gradient-subtle-bg">
         <div className="container mx-auto max-w-3xl">
           <div className="bg-background border border-border rounded-3xl p-8 md:p-10 shadow-sm">
             <div className="flex items-center gap-3 mb-5">
@@ -54,7 +54,7 @@ const TheStory = () => {
       </section>
 
       {/* Quick Stats Bar */}
-      <section className="py-12 px-6">
+      <section className="py-12 px-3 md:px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -74,7 +74,7 @@ const TheStory = () => {
       </section>
 
       {/* Table of Contents */}
-      <section className="px-6 pb-16">
+      <section className="px-3 md:px-4 pb-16">
         <div className="container mx-auto max-w-3xl">
           <div className="border border-border rounded-2xl p-6 md:p-8">
             <h3 className="font-display font-bold text-lg mb-5 flex items-center gap-2">
@@ -106,7 +106,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 0: Vision */}
-      <section id="section-0" className="py-16 px-6 scroll-mt-24">
+      <section id="section-0" className="py-16 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             The Vision That Seemed <span className="gradient-text">Impossible</span>
@@ -142,7 +142,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 1: What I Built - Skills */}
-      <section id="section-1" className="py-16 px-6 gradient-subtle-bg scroll-mt-24">
+      <section id="section-1" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
@@ -261,7 +261,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 2: Numbers - Big comparison */}
-      <section id="section-2" className="py-20 px-6 scroll-mt-24">
+      <section id="section-2" className="py-20 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
             The Mind-Blowing <span className="gradient-text">Numbers</span>
@@ -294,7 +294,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 3: Claude Code */}
-      <section id="section-3" className="py-16 px-6 gradient-subtle-bg scroll-mt-24">
+      <section id="section-3" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             How Claude Code <span className="gradient-text">Changed Everything</span>
@@ -338,7 +338,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 4: Impossible Features */}
-      <section id="section-4" className="py-16 px-6 scroll-mt-24">
+      <section id="section-4" className="py-16 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4">
             Features That Would've Been <span className="gradient-text">Impossible</span>
@@ -366,7 +366,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 5: Apps Replaced */}
-      <section id="section-5" className="py-16 px-6 gradient-subtle-bg scroll-mt-24">
+      <section id="section-5" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
             Apps & Services <span className="gradient-text">Aiva Replaces</span>
@@ -399,7 +399,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 6: Dark Truth */}
-      <section id="section-6" className="py-16 px-6 scroll-mt-24">
+      <section id="section-6" className="py-16 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             The Dark Truth About <span className="gradient-text">Traditional Development</span>
@@ -426,7 +426,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 7: Agencies */}
-      <section id="section-7" className="py-16 px-6 gradient-subtle-bg scroll-mt-24">
+      <section id="section-7" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Why This <span className="gradient-text">Terrifies Agencies</span>
@@ -456,7 +456,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 8: Future */}
-      <section id="section-8" className="py-16 px-6 scroll-mt-24">
+      <section id="section-8" className="py-16 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             The Future Is <span className="gradient-text">Already Here</span>
@@ -480,7 +480,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 9: Building Next */}
-      <section id="section-9" className="py-16 px-6 gradient-subtle-bg scroll-mt-24">
+      <section id="section-9" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             What I'm <span className="gradient-text">Building Next</span>
@@ -506,7 +506,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 10: Message to Founders */}
-      <section id="section-10" className="py-16 px-6 scroll-mt-24">
+      <section id="section-10" className="py-16 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             The Message to <span className="gradient-text">Other Founders</span>
@@ -530,7 +530,7 @@ const TheStory = () => {
       </section>
 
       {/* Section 11: Conclusion */}
-      <section id="section-11" className="py-20 px-6 scroll-mt-24">
+      <section id="section-11" className="py-20 px-3 md:px-4 scroll-mt-24">
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-8">
             <span className="gradient-text">Conclusion</span>
@@ -561,7 +561,7 @@ const TheStory = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-6">
+      <footer className="border-t border-border py-8 px-3 md:px-4">
         <div className="container mx-auto max-w-4xl flex items-center justify-between">
           <span className="font-display text-xl font-bold gradient-text">AIVA</span>
           <span className="text-sm text-muted-foreground">© 2025 Aiva. All rights reserved.</span>
