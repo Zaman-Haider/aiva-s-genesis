@@ -1,5 +1,11 @@
 import Navbar from "@/components/Navbar";
-import { ArrowRight, Clock, User, Zap, DollarSign, TrendingUp, Shield, Bot, Sparkles, Rocket, Users, Code2, Database, Layers, Globe } from "lucide-react";
+import { ArrowRight, Clock, User, Zap, DollarSign, TrendingUp, Shield, Bot, Sparkles, Rocket, Users, Code2, Database, Layers, Globe, CheckCircle2, ArrowDown } from "lucide-react";
+
+const SectionLabel = ({ children }: { children: React.ReactNode }) => (
+  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+    {children}
+  </div>
+);
 
 const TheStory = () => {
   return (
@@ -7,66 +13,67 @@ const TheStory = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="gradient-hero pt-28 pb-24 px-3 md:px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.1)_0%,_transparent_60%)]" />
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-sm font-medium mb-8">
-            <Sparkles className="w-4 h-4" />
+      <section className="gradient-hero pt-28 pb-20 px-3 md:px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.15)_0%,_transparent_50%)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+        <div className="container mx-auto max-w-3xl text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-xs font-semibold mb-6">
+            <Sparkles className="w-3.5 h-3.5" />
             5 Early Adopter Spots Available
           </div>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-[1.1] mb-6">
-            How I Built an Enterprise SaaS Platform in{" "}
+          <h1 className="font-display text-3xl md:text-5xl lg:text-[3.5rem] font-bold text-primary-foreground leading-[1.15] mb-5">
+            How I Built an Enterprise SaaS in{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Two Weeks</span>
-              <span className="absolute bottom-1 left-0 right-0 h-3 bg-accent/40 -z-0 rounded" />
+              <span className="absolute bottom-0.5 left-0 right-0 h-2.5 bg-accent/40 rounded" />
             </span>{" "}
             With AI
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 font-display font-medium mb-10">
-            (And Why Traditional Development is Dead)
+          <p className="text-lg md:text-xl text-primary-foreground/80 font-medium mb-8">
+            And Why Traditional Development is Dead
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/70 text-sm mb-10">
-            <span className="flex items-center gap-2"><User className="w-4 h-4" /> Tim Thomas</span>
-            <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> November 14, 2025</span>
-            <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 6-7 min read</span>
+          <div className="flex flex-wrap justify-center gap-5 text-primary-foreground/60 text-xs mb-6">
+            <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5" /> Tim Thomas</span>
+            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> Nov 14, 2025</span>
+            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 6-7 min read</span>
           </div>
-          <p className="text-primary-foreground/60 text-sm max-w-xl mx-auto">
-            Help refine Aiva, in return get 1:1 expert consultation from me and Aiva FREE for 3 months!
-          </p>
+          <div className="flex justify-center">
+            <a href="#section-0" className="flex items-center gap-1 text-primary-foreground/50 text-xs hover:text-primary-foreground/80 transition-colors">
+              Scroll to read <ArrowDown className="w-3 h-3 animate-bounce" />
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* TL;DR Banner */}
-      <section className="py-16 px-3 md:px-4 gradient-subtle-bg">
+      {/* TL;DR */}
+      <section className="py-12 px-3 md:px-4 -mt-8 relative z-10">
         <div className="container mx-auto max-w-3xl">
-          <div className="bg-background border border-border rounded-3xl p-8 md:p-10 shadow-sm">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="gradient-bg text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">TL;DR</span>
-            </div>
-            <p className="text-foreground text-lg leading-relaxed font-medium mb-4">
-              I built <span className="gradient-text font-bold">Aiva</span>, an AI employee for online merchants. One goal — increase revenue, cut costs.
+          <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg shadow-primary/5">
+            <span className="gradient-bg text-primary-foreground px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-widest">Summary</span>
+            <p className="text-foreground text-base leading-relaxed font-medium mt-4 mb-3">
+              I built <span className="gradient-text font-bold">Aiva</span> — an AI employee for e-commerce merchants. One goal: increase revenue, cut costs.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              What should've taken a team of 10 developers, months of planning, and a six-figure budget was built in ~100 hours at near-zero cost, with production-ready integrations, enterprise-class security, and real merchants already onboarded.
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              What should've taken 10 developers and 6 figures was built in ~100 hours at near-zero cost, with production-ready integrations and real merchants onboarded.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats Bar */}
-      <section className="py-12 px-3 md:px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Quick Stats */}
+      <section className="py-10 px-3 md:px-4">
+        <div className="container mx-auto max-w-3xl">
+          <div className="grid grid-cols-4 gap-3">
             {[
-              { icon: Code2, value: "25,000+", label: "Lines of Code" },
-              { icon: Database, value: "58", label: "Database Tables" },
-              { icon: Layers, value: "47", label: "API Endpoints" },
+              { icon: Code2, value: "25k+", label: "Lines" },
+              { icon: Database, value: "58", label: "Tables" },
+              { icon: Layers, value: "47", label: "APIs" },
               { icon: Globe, value: "12", label: "Integrations" },
             ].map((s, i) => (
-              <div key={i} className="text-center p-6 rounded-2xl border border-border hover:shadow-md transition-shadow">
-                <s.icon className="w-5 h-5 mx-auto mb-3 text-primary" />
-                <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{s.value}</div>
-                <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+              <div key={i} className="text-center py-4 px-2 rounded-xl border border-border bg-card">
+                <s.icon className="w-4 h-4 mx-auto mb-2 text-primary" />
+                <div className="font-display text-xl md:text-2xl font-bold gradient-text">{s.value}</div>
+                <div className="text-[10px] text-muted-foreground mt-0.5">{s.label}</div>
               </div>
             ))}
           </div>
@@ -74,290 +81,256 @@ const TheStory = () => {
       </section>
 
       {/* Table of Contents */}
-      <section className="px-3 md:px-4 pb-16">
+      <section className="px-3 md:px-4 pb-12">
         <div className="container mx-auto max-w-3xl">
-          <div className="border border-border rounded-2xl p-6 md:p-8">
-            <h3 className="font-display font-bold text-lg mb-5 flex items-center gap-2">
-              📖 Contents
-            </h3>
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
+          <details className="border border-border rounded-xl overflow-hidden group">
+            <summary className="p-4 cursor-pointer flex items-center justify-between hover:bg-muted/50 transition-colors">
+              <span className="font-display font-bold text-sm flex items-center gap-2">📖 Table of Contents</span>
+              <ArrowDown className="w-4 h-4 text-muted-foreground group-open:rotate-180 transition-transform" />
+            </summary>
+            <div className="px-4 pb-4 grid grid-cols-2 gap-x-6 gap-y-1">
               {[
-                "The Vision That Seemed Impossible",
-                "What I Built: The AIVA Platform",
-                "The Mind-Blowing Numbers",
-                "How Claude Code Changed Everything",
-                "Features That Would've Been Impossible",
-                "Apps & Services Aiva Replaces",
-                "The Dark Truth About Traditional Dev",
-                "Why This Terrifies Agencies",
-                "The Future Is Already Here",
-                "What I'm Building Next",
-                "The Message to Founders",
-                "Conclusion",
+                "The Vision", "The AIVA Platform", "The Numbers", "Claude Code",
+                "Impossible Features", "Apps Replaced", "Traditional Dev is Dead",
+                "Why Agencies Fear This", "The Future", "What's Next", "To Founders", "Conclusion",
               ].map((s, i) => (
-                <a key={i} href={`#section-${i}`} className="text-sm text-muted-foreground hover:text-primary transition-colors py-1.5 flex items-center gap-2 group">
-                  <span className="w-5 h-5 rounded-full bg-muted text-[10px] font-bold flex items-center justify-center group-hover:gradient-bg group-hover:text-primary-foreground transition-all">{i + 1}</span>
+                <a key={i} href={`#section-${i}`} className="text-xs text-muted-foreground hover:text-primary transition-colors py-1.5 flex items-center gap-2">
+                  <span className="w-4 h-4 rounded bg-muted text-[9px] font-bold flex items-center justify-center shrink-0">{i + 1}</span>
                   {s}
                 </a>
               ))}
             </div>
-          </div>
+          </details>
         </div>
       </section>
 
       {/* Section 0: Vision */}
-      <section id="section-0" className="py-16 px-3 md:px-4 scroll-mt-24">
+      <section id="section-0" className="py-14 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+          <SectionLabel>The Beginning</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
             The Vision That Seemed <span className="gradient-text">Impossible</span>
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-            Two weeks ago I set out to build something most CTOs would call naïve: a full-stack, AI-powered SaaS platform that replaces <strong className="text-foreground">$7,000+ per month</strong> in software and labour costs — while making merchants more money.
+          <p className="text-muted-foreground leading-relaxed mb-5">
+            I set out to build a full-stack, AI-powered SaaS that replaces <strong className="text-foreground">$7,000+/month</strong> in software and labour costs — while making merchants more money.
           </p>
-          <p className="text-foreground font-display font-bold text-xl mb-6">
-            Not a single tool. Not a toy MVP. A complete, enterprise-grade system.
+          <p className="text-foreground font-display font-bold text-lg mb-5">
+            Not a toy MVP. A complete, enterprise-grade system that replaces:
           </p>
-          <div className="grid sm:grid-cols-2 gap-3 mb-8">
+          <div className="grid grid-cols-2 gap-2 mb-6">
             {[
-              "Klaviyo/MailChimp (email/SMS)",
-              "Recharge/Bold (subscriptions)",
-              "UpPromote/BixGrow (affiliates)",
-              "Gorgias (customer support)",
-              "Jasper/Copy.ai (content)",
-              "AdCreative.ai (ad generation)",
-              "Staff & Agency fees ($3-5k+/mo)",
-              "Revenue intelligence (unique)",
+              "Klaviyo/MailChimp", "Recharge/Bold", "UpPromote/BixGrow", "Gorgias",
+              "Jasper/Copy.ai", "AdCreative.ai", "Agency fees ($3-5k+)", "Revenue intel",
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 text-sm text-muted-foreground">
-                <span className="w-2 h-2 rounded-full gradient-bg shrink-0" /> {item}
+              <div key={i} className="flex items-center gap-2 py-2 px-3 rounded-lg bg-muted/50 text-xs text-muted-foreground">
+                <CheckCircle2 className="w-3 h-3 text-primary shrink-0" /> {item}
               </div>
             ))}
           </div>
-          <div className="gradient-subtle-bg rounded-2xl p-6 border border-border">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              <strong className="text-foreground">My resources?</strong> One human (me). One Claude Max subscription. Determination. Caffeine. Not much sleep. And somehow — I shipped it. In production. For real clients.
+          <div className="rounded-xl bg-muted/30 border border-border p-4">
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              <strong className="text-foreground">My resources?</strong> One human. One Claude Max subscription. Caffeine. And somehow — I shipped it in production for real clients.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section 1: What I Built - Skills */}
-      <section id="section-1" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
+      {/* Divider */}
+      <div className="container mx-auto max-w-3xl px-3 md:px-4"><div className="border-t border-border" /></div>
+
+      {/* Section 1: Skills */}
+      <section id="section-1" className="py-14 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              What I Built: The <span className="gradient-text">AIVA Platform</span>
+          <div className="text-center mb-10">
+            <SectionLabel>The Platform</SectionLabel>
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+              What I Built: <span className="gradient-text">AIVA</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              AIVA — AI Virtual Assistant. A modular AI employee whose skills toggle on/off per merchant. One powerful assistant that learns your business.
+            <p className="text-muted-foreground text-sm max-w-lg mx-auto">
+              A modular AI employee whose skills toggle on/off per merchant. One assistant that learns your business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {[
               {
-                icon: TrendingUp,
-                emoji: "🎯",
-                title: "Sales Skill",
-                subtitle: "Revenue Multiplication Engine",
-                cost: "$25k–50k setup",
-                time: "2 days",
-                features: ["RFM Analysis & segmentation", "Cart Recovery (3-stage AI)", "Churn Prediction & win-back", "Post-Purchase Upsells"],
-                impact: "More revenue, repeat orders, LTV",
+                emoji: "🎯", title: "Sales Intelligence",
+                cost: "$25k–50k", time: "2 days",
+                features: ["RFM segmentation", "Cart recovery", "Churn prediction", "Upsells"],
+                impact: "More revenue & LTV",
               },
               {
-                icon: Sparkles,
-                emoji: "📢",
-                title: "Marketing Skill",
-                subtitle: "The Content Machine",
-                cost: "$2k–5k/month",
-                time: "1 day",
-                features: ["SEO blog generation", "Social post automation", "Competitor tracking", "Email sequences & lead magnets"],
-                impact: "50–100% traffic increase",
+                emoji: "📢", title: "Content Marketing",
+                cost: "$2k–5k/mo", time: "1 day",
+                features: ["SEO blogs", "Social automation", "Competitor tracking", "Email sequences"],
+                impact: "50–100% traffic boost",
               },
               {
-                icon: Zap,
-                emoji: "🔄",
-                title: "Subscription Skill",
-                subtitle: "Retention Powerhouse",
-                cost: "$200–500/mo + %",
-                time: "2 days",
-                features: ["Recharge, Seal, Bold, Appstle, Loop", "Churn prediction & detection", "Zero friction SMS upsells", "Dunning flows"],
-                impact: "Churn reduction, MRR uplift",
+                emoji: "🔄", title: "Subscriptions",
+                cost: "$200–500/mo", time: "2 days",
+                features: ["6 platform integrations", "Churn detection", "SMS upsells", "Dunning flows"],
+                impact: "Lower churn, higher MRR",
               },
               {
-                icon: Bot,
-                emoji: "💬",
-                title: "Customer Service",
-                subtitle: "24/7 Support Team",
-                cost: "$30–40k/year",
-                time: "½ day",
-                features: ["Instant responses & order tracking", "Returns/exchanges handling", "Product recommendations", "Sentiment detection & escalation"],
+                emoji: "💬", title: "Customer Service",
+                cost: "$30–40k/yr", time: "½ day",
+                features: ["Instant responses", "Order tracking", "Sentiment detection", "Smart escalation"],
                 impact: "60–80% auto-resolved",
               },
               {
-                icon: Sparkles,
-                emoji: "🎨",
-                title: "Design Skill",
-                subtitle: "Creative at Scale",
-                cost: "$2k–5k/month",
-                time: "1 day",
-                features: ["Ad creative generation", "Video ads with voiceovers", "A/B variations", "Brand-consistent templates"],
-                impact: "50–70% cost reduction",
+                emoji: "🎨", title: "Creative Design",
+                cost: "$2k–5k/mo", time: "1 day",
+                features: ["Ad generation", "Video + voiceover", "A/B testing", "Brand templates"],
+                impact: "50–70% cost cut",
               },
               {
-                icon: Users,
-                emoji: "🤝",
-                title: "Affiliate Platform",
-                subtitle: "Marketing Powerhouse",
-                cost: "$2k/month (Impact.com)",
-                time: "2 days",
-                features: ["Two-tier MLM commissions", "LTV-based payouts & fraud detection", "Dynamic discount codes", "Tiered bonuses & real-time tracking"],
-                impact: "Full affiliate system in 48 hrs",
+                emoji: "🤝", title: "Affiliate Platform",
+                cost: "$2k/mo", time: "2 days",
+                features: ["MLM commissions", "Fraud detection", "Dynamic codes", "Auto payouts"],
+                impact: "Full system in 48hrs",
               },
             ].map((skill, i) => (
-              <div key={i} className="bg-background border border-border rounded-2xl p-6 hover:shadow-lg transition-all group">
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-3xl">{skill.emoji}</span>
-                  <div className="flex gap-2">
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full gradient-bg text-primary-foreground">{skill.cost}</span>
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-muted text-muted-foreground">⚡ {skill.time}</span>
+              <div key={i} className="bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/20 transition-all">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{skill.emoji}</span>
+                    <h3 className="font-display font-bold text-sm">{skill.title}</h3>
                   </div>
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded gradient-bg text-primary-foreground">⚡ {skill.time}</span>
                 </div>
-                <h3 className="font-display font-bold text-lg">{skill.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{skill.subtitle}</p>
-                <ul className="space-y-1.5 mb-4">
+                <div className="grid grid-cols-2 gap-1 mb-3">
                   {skill.features.map((f, j) => (
-                    <li key={j} className="text-xs text-muted-foreground flex items-center gap-2">
+                    <span key={j} className="text-[11px] text-muted-foreground flex items-center gap-1.5">
                       <span className="w-1 h-1 rounded-full gradient-bg shrink-0" /> {f}
-                    </li>
+                    </span>
                   ))}
-                </ul>
-                <div className="pt-3 border-t border-border">
-                  <p className="text-xs font-semibold">
-                    <span className="gradient-text">Impact:</span>{" "}
-                    <span className="text-muted-foreground">{skill.impact}</span>
-                  </p>
+                </div>
+                <div className="flex items-center justify-between pt-3 border-t border-border">
+                  <span className="text-[10px] text-muted-foreground">Was: <strong className="text-foreground">{skill.cost}</strong></span>
+                  <span className="text-[10px] font-semibold gradient-text">{skill.impact}</span>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Extra skills */}
-          <div className="mt-8 grid md:grid-cols-3 gap-4">
+          <div className="mt-4 grid grid-cols-3 gap-3">
             {[
-              { emoji: "🎲", title: "Promotions", desc: "Blockchain-powered fair prize draws with Chainlink VRF" },
-              { emoji: "🔒", title: "Enterprise Security", desc: "Rate limiting, telemetry, monitoring, multi-tenant" },
-              { emoji: "⚙️", title: "Job Scheduling", desc: "Hangfire background jobs with intelligent processing" },
+              { emoji: "🎲", title: "Promotions", desc: "Blockchain-powered draws" },
+              { emoji: "🔒", title: "Security", desc: "Enterprise-grade infra" },
+              { emoji: "⚙️", title: "Automation", desc: "Background job engine" },
             ].map((item, i) => (
-              <div key={i} className="bg-background border border-border rounded-xl p-5 text-center">
-                <span className="text-2xl block mb-2">{item.emoji}</span>
-                <h4 className="font-display font-bold text-sm mb-1">{item.title}</h4>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
+              <div key={i} className="border border-border rounded-lg p-3 text-center bg-card">
+                <span className="text-lg">{item.emoji}</span>
+                <h4 className="font-display font-bold text-[11px] mt-1">{item.title}</h4>
+                <p className="text-[10px] text-muted-foreground">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 2: Numbers - Big comparison */}
-      <section id="section-2" className="py-20 px-3 md:px-4 scroll-mt-24">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
-            The Mind-Blowing <span className="gradient-text">Numbers</span>
-          </h2>
+      {/* Section 2: Numbers */}
+      <section id="section-2" className="py-14 px-3 md:px-4 gradient-subtle-bg scroll-mt-20">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-10">
+            <SectionLabel>The Numbers</SectionLabel>
+            <h2 className="font-display text-2xl md:text-3xl font-bold">
+              Mind-Blowing <span className="gradient-text">Economics</span>
+            </h2>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="border-2 border-border rounded-3xl p-8 relative">
-              <span className="absolute -top-3 left-6 px-3 py-1 bg-background border border-border rounded-full text-xs font-semibold text-muted-foreground">Traditional</span>
-              <div className="font-display text-5xl font-bold text-foreground mb-2 mt-2">$500,000<span className="text-2xl">+</span></div>
-              <p className="text-muted-foreground">12+ months • Team of 10+</p>
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="border-2 border-border rounded-2xl p-6 bg-card relative">
+              <span className="absolute -top-2.5 left-4 px-2 py-0.5 bg-card border border-border rounded text-[10px] font-bold text-muted-foreground">TRADITIONAL</span>
+              <div className="font-display text-3xl md:text-4xl font-bold text-foreground mt-1">$500k<span className="text-lg">+</span></div>
+              <p className="text-xs text-muted-foreground mt-1">12+ months • 10+ devs</p>
             </div>
-            <div className="gradient-bg rounded-3xl p-8 relative">
-              <span className="absolute -top-3 left-6 px-3 py-1 bg-background rounded-full text-xs font-semibold text-foreground">With AI</span>
-              <div className="font-display text-5xl font-bold text-primary-foreground mb-2 mt-2">$190</div>
-              <p className="text-primary-foreground/80">2 weeks • 1 person</p>
+            <div className="gradient-bg rounded-2xl p-6 relative">
+              <span className="absolute -top-2.5 left-4 px-2 py-0.5 bg-card rounded text-[10px] font-bold text-foreground">WITH AI</span>
+              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mt-1">$190</div>
+              <p className="text-xs text-primary-foreground/70 mt-1">2 weeks • 1 person</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="text-center p-8 rounded-2xl gradient-subtle-bg">
-              <div className="font-display text-4xl md:text-5xl font-bold gradient-text">25x</div>
-              <p className="text-sm text-muted-foreground mt-2">Cost Reduction</p>
+            <div className="text-center py-6 rounded-xl bg-card border border-border">
+              <div className="font-display text-3xl font-bold gradient-text">25x</div>
+              <p className="text-[11px] text-muted-foreground mt-1">Cost Reduction</p>
             </div>
-            <div className="text-center p-8 rounded-2xl gradient-subtle-bg">
-              <div className="font-display text-4xl md:text-5xl font-bold gradient-text">26x</div>
-              <p className="text-sm text-muted-foreground mt-2">Faster to Market</p>
+            <div className="text-center py-6 rounded-xl bg-card border border-border">
+              <div className="font-display text-3xl font-bold gradient-text">26x</div>
+              <p className="text-[11px] text-muted-foreground mt-1">Faster to Market</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 3: Claude Code */}
-      <section id="section-3" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
+      <section id="section-3" className="py-14 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+          <SectionLabel>The Engine</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
             How Claude Code <span className="gradient-text">Changed Everything</span>
           </h2>
 
-          <blockquote className="relative gradient-bg rounded-2xl p-8 mb-10 text-primary-foreground">
-            <span className="text-6xl absolute top-2 left-4 opacity-20 font-serif">"</span>
-            <p className="font-display text-xl font-bold leading-relaxed relative z-10">
-              Claude Code didn't just speed up development — it redefined what "possible" means.
+          <blockquote className="gradient-bg rounded-xl p-6 mb-8 text-primary-foreground">
+            <p className="font-display text-base md:text-lg font-bold leading-relaxed">
+              "Claude Code didn't just speed up development — it redefined what 'possible' means."
             </p>
           </blockquote>
 
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            It thinks like a senior architect, writes like a machine, and iterates like a world-class engineering team. It designs schemas, writes migrations, implements services, integrates APIs, documents everything. And it never gets tired.
+          <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+            It thinks like a senior architect, writes like a machine, and never gets tired. Schemas, migrations, services, APIs, tests, docs — all handled.
           </p>
 
-          <h3 className="font-display text-xl font-bold mb-6">The Workflow</h3>
-          <div className="space-y-4 mb-10">
+          <div className="space-y-3 mb-8">
             {[
-              { step: "01", title: "Describe the outcome, not the code", desc: "Full system requirements with production constraints — not 'write a function.'" },
-              { step: "02", title: "Get the whole blueprint", desc: "Tables, models, DTOs, services, repo patterns, jobs, error handling — all at once." },
-              { step: "03", title: "Iterate & refine", desc: "Like a senior architect beside me, bug fixing and enhancing in real time." },
-              { step: "04", title: "Ship it", desc: "The speed is obscene." },
+              { n: "01", title: "Describe the outcome", desc: "Full system requirements with production constraints." },
+              { n: "02", title: "Get the blueprint", desc: "Tables, services, jobs, error handling — all at once." },
+              { n: "03", title: "Iterate & refine", desc: "Like a senior architect beside you in real time." },
+              { n: "04", title: "Ship it", desc: "The speed is obscene." },
             ].map((item) => (
-              <div key={item.step} className="flex gap-5 items-start bg-background border border-border rounded-xl p-5">
-                <span className="font-display text-2xl font-bold gradient-text shrink-0">{item.step}</span>
+              <div key={item.n} className="flex gap-4 items-start border border-border rounded-lg p-4 bg-card hover:border-primary/20 transition-colors">
+                <span className="font-display text-lg font-bold gradient-text shrink-0 w-6">{item.n}</span>
                 <div>
-                  <p className="font-display font-bold text-foreground">{item.title}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
+                  <p className="font-display font-bold text-sm">{item.title}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="bg-background border border-border rounded-2xl p-6">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              <strong className="text-foreground">A word of caution:</strong> 25 years experience delivering websites from 4 to 7 figures gave me the ability to make this happen. You can't just watch a few 'vibe coding' videos and deliver something like this. Decades of industry experience matters.
+          <div className="rounded-xl bg-muted/30 border border-border p-4">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">A word of caution:</strong> 25 years of full-stack experience made this possible. You can't just watch vibe-coding videos and replicate this. Experience matters.
             </p>
           </div>
         </div>
       </section>
 
       {/* Section 4: Impossible Features */}
-      <section id="section-4" className="py-16 px-3 md:px-4 scroll-mt-24">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4">
-            Features That Would've Been <span className="gradient-text">Impossible</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">Traditionally, these features alone would each take months of dedicated engineering.</p>
-          <div className="grid md:grid-cols-2 gap-6">
+      <section id="section-4" className="py-14 px-3 md:px-4 gradient-subtle-bg scroll-mt-20">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-8">
+            <SectionLabel>Beyond Limits</SectionLabel>
+            <h2 className="font-display text-2xl md:text-3xl font-bold">
+              Previously <span className="gradient-text">Impossible</span> Features
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { icon: Zap, title: "Zero-Latency Subscription Intelligence", desc: "Real-time churn signal detection. Normally a full-time data engineering nightmare." },
-              { icon: Users, title: "Instant Affiliate Networks", desc: "Complete multi-tier system rival to Impact.com ($2k/mo) — built in 48 hours." },
-              { icon: Sparkles, title: "End-to-End Creative Production", desc: "Prompt → Script → Voiceover → Video → Ads → Scheduling. All automated." },
-              { icon: Rocket, title: "Dynamic AI-Driven Onboarding", desc: "Pop in your API key and Aiva sets everything up. Workflows, pipelines, templates — done." },
+              { icon: Zap, title: "Zero-Latency Subscription Intel", desc: "Real-time churn signals. Normally a data engineering nightmare." },
+              { icon: Users, title: "Instant Affiliate Networks", desc: "Full multi-tier system rivalling Impact.com — 48 hours." },
+              { icon: Sparkles, title: "End-to-End Creative Pipeline", desc: "Prompt → Script → Voiceover → Video → Ads. Automated." },
+              { icon: Rocket, title: "AI-Driven Onboarding", desc: "API key in → everything configured. Workflows, pipelines, templates." },
             ].map((f, i) => (
-              <div key={i} className="border border-border rounded-2xl p-6 flex gap-4 items-start hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shrink-0">
-                  <f.icon className="w-5 h-5 text-primary-foreground" />
+              <div key={i} className="bg-card border border-border rounded-xl p-5 flex gap-3 items-start hover:shadow-md hover:border-primary/20 transition-all">
+                <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center shrink-0">
+                  <f.icon className="w-4 h-4 text-primary-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-base mb-1">{f.title}</h4>
-                  <p className="text-sm text-muted-foreground">{f.desc}</p>
+                  <h4 className="font-display font-bold text-xs mb-1">{f.title}</h4>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -366,138 +339,144 @@ const TheStory = () => {
       </section>
 
       {/* Section 5: Apps Replaced */}
-      <section id="section-5" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-12">
-            Apps & Services <span className="gradient-text">Aiva Replaces</span>
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <section id="section-5" className="py-14 px-3 md:px-4 scroll-mt-20">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-8">
+            <SectionLabel>The Stack Killer</SectionLabel>
+            <h2 className="font-display text-2xl md:text-3xl font-bold">
+              Apps <span className="gradient-text">Aiva Replaces</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
             {[
-              { cat: "Marketing", items: ["Klaviyo", "Mailchimp", "Omnisend", "Canva Pro", "AdCreative.ai"] },
+              { cat: "Marketing", items: ["Klaviyo", "Mailchimp", "Omnisend", "Canva Pro"] },
               { cat: "Subscriptions", items: ["Recharge", "Appstle", "Bold", "Loop"] },
               { cat: "Support", items: ["Gorgias", "Zendesk"] },
-              { cat: "Consulting", items: ["Copywriters", "Strategists", "Analysts", "Data scientists"] },
+              { cat: "People", items: ["Copywriters", "Strategists", "Analysts"] },
             ].map((g, i) => (
-              <div key={i} className="bg-background border border-border rounded-2xl p-5">
-                <h4 className="font-display font-bold text-sm mb-3 gradient-text uppercase tracking-wider">{g.cat}</h4>
-                <ul className="space-y-2">
+              <div key={i} className="border border-border rounded-xl p-4 bg-card">
+                <h4 className="font-display font-bold text-[10px] mb-2 gradient-text uppercase tracking-wider">{g.cat}</h4>
+                <ul className="space-y-1.5">
                   {g.items.map((item, j) => (
-                    <li key={j} className="text-sm text-muted-foreground flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full gradient-bg shrink-0" /> {item}
+                    <li key={j} className="text-[11px] text-muted-foreground flex items-center gap-1.5">
+                      <span className="w-1 h-1 rounded-full gradient-bg shrink-0" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="gradient-bg rounded-2xl p-8 text-center text-primary-foreground">
-            <DollarSign className="w-8 h-8 mx-auto mb-3 opacity-80" />
-            <p className="font-display text-3xl md:text-4xl font-bold mb-2">$5,000–$15,000/month saved</p>
-            <p className="text-sm opacity-80">Plus increased revenue, retention, LTV, and unlimited automation</p>
+          <div className="gradient-bg rounded-xl p-6 text-center text-primary-foreground">
+            <p className="font-display text-2xl md:text-3xl font-bold">$5k–$15k<span className="text-base font-normal opacity-70">/month saved</span></p>
+            <p className="text-xs opacity-70 mt-1">Plus increased revenue, retention & unlimited automation</p>
           </div>
         </div>
       </section>
 
       {/* Section 6: Dark Truth */}
-      <section id="section-6" className="py-16 px-3 md:px-4 scroll-mt-24">
+      <section id="section-6" className="py-14 px-3 md:px-4 gradient-subtle-bg scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
-            The Dark Truth About <span className="gradient-text">Traditional Development</span>
+          <SectionLabel>Wake-Up Call</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
+            Traditional Dev is <span className="gradient-text">Dead</span>
           </h2>
-          <div className="space-y-4 mb-8">
+          <div className="space-y-2 mb-6">
             {[
-              "Developers who refuse to use AI will ship 10-20x slower.",
-              "Agencies will lose clients to AI-native competitors.",
-              "Startups will die before launch if they ignore AI tooling.",
-              "Old products will stagnate while AI-first teams sprint ahead.",
+              "Devs refusing AI ship 10-20x slower",
+              "Agencies lose to AI-native competitors",
+              "Startups die before launch without AI",
+              "Legacy products stagnate as AI teams sprint",
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border">
-                <Zap className="w-5 h-5 text-secondary shrink-0" />
-                <p className="text-sm text-foreground font-medium">{item}</p>
+              <div key={i} className="flex items-center gap-3 p-3 rounded-lg border border-border bg-card">
+                <Zap className="w-4 h-4 text-secondary shrink-0" />
+                <p className="text-xs text-foreground font-medium">{item}</p>
               </div>
             ))}
           </div>
-          <blockquote className="gradient-bg rounded-2xl p-8 text-primary-foreground text-center">
-            <p className="font-display text-xl md:text-2xl font-bold">
-              "Software isn't expensive anymore.<br />Inefficiency is expensive."
+          <blockquote className="gradient-bg rounded-xl p-6 text-primary-foreground text-center">
+            <p className="font-display text-base md:text-lg font-bold">
+              "Software isn't expensive anymore. Inefficiency is."
             </p>
           </blockquote>
         </div>
       </section>
 
       {/* Section 7: Agencies */}
-      <section id="section-7" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
+      <section id="section-7" className="py-14 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+          <SectionLabel>Industry Shift</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-5">
             Why This <span className="gradient-text">Terrifies Agencies</span>
           </h2>
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            I've built and run an agency for 25 years. I know their margins, bottlenecks, and weaknesses. That's why I developed Aiva — AI SwaS (Software with a Service).
+          <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            25 years running an agency taught me their weaknesses. Aiva exploits all three:
           </p>
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-3 gap-3 mb-6">
             {[
-              { title: "Labour Hours", desc: "Agencies sell time. Aiva kills that model.", icon: Clock },
-              { title: "Skill Moats", desc: "Aiva writes ads, scripts, emails, funnels, code.", icon: Shield },
-              { title: "Retainers", desc: "AI does 80% of work. Why pay $6k/month?", icon: DollarSign },
+              { icon: Clock, title: "Time", desc: "They sell hours. AI kills that." },
+              { icon: Shield, title: "Skills", desc: "AI writes everything now." },
+              { icon: DollarSign, title: "Retainers", desc: "80% automated. Why pay?" },
             ].map((item, i) => (
-              <div key={i} className="bg-background border border-border rounded-2xl p-5 text-center">
-                <item.icon className="w-6 h-6 mx-auto mb-3 text-primary" />
-                <h4 className="font-display font-bold text-sm mb-1">{item.title}</h4>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
+              <div key={i} className="border border-border rounded-xl p-4 text-center bg-card hover:border-primary/20 transition-colors">
+                <item.icon className="w-5 h-5 mx-auto mb-2 text-primary" />
+                <h4 className="font-display font-bold text-[11px]">{item.title}</h4>
+                <p className="text-[10px] text-muted-foreground mt-1">{item.desc}</p>
               </div>
             ))}
           </div>
-          <div className="bg-background border border-border rounded-2xl p-6">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Agencies survive only by pivoting into AI orchestration and automation consulting. If you're an Agency — become an <strong className="text-foreground">Aiva Partner</strong>. We build. You sell. We both profit.
+          <div className="rounded-xl bg-muted/30 border border-border p-4">
+            <p className="text-xs text-muted-foreground">
+              Become an <strong className="text-foreground">Aiva Partner</strong> — we build, you sell, we both profit.
             </p>
           </div>
         </div>
       </section>
 
       {/* Section 8: Future */}
-      <section id="section-8" className="py-16 px-3 md:px-4 scroll-mt-24">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+      <section id="section-8" className="py-14 px-3 md:px-4 gradient-subtle-bg scroll-mt-20">
+        <div className="container mx-auto max-w-3xl text-center">
+          <SectionLabel>Paradigm Shift</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
             The Future Is <span className="gradient-text">Already Here</span>
           </h2>
-          <blockquote className="gradient-bg rounded-2xl p-8 text-primary-foreground text-center mb-10">
-            <p className="font-display text-xl md:text-2xl font-bold">
+          <blockquote className="gradient-bg rounded-xl p-6 text-primary-foreground mb-8">
+            <p className="font-display text-base md:text-lg font-bold">
               "The founder who masters AI will beat the company with 50 employees who does not."
             </p>
           </blockquote>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border-2 border-border rounded-2xl p-6 text-center">
-              <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">The Old Way</p>
-              <p className="font-display text-xl font-bold text-foreground">Money → Talent → Speed</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="border-2 border-border rounded-xl p-5 bg-card">
+              <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-bold mb-2">Old Way</p>
+              <p className="font-display font-bold text-sm">Money → Talent → Speed</p>
             </div>
-            <div className="gradient-bg rounded-2xl p-6 text-center">
-              <p className="text-xs text-primary-foreground/70 mb-3 uppercase tracking-wider font-semibold">The New Way</p>
-              <p className="font-display text-xl font-bold text-primary-foreground">Knowledge → Prompts → Speed</p>
+            <div className="gradient-bg rounded-xl p-5">
+              <p className="text-[10px] text-primary-foreground/60 uppercase tracking-wider font-bold mb-2">New Way</p>
+              <p className="font-display font-bold text-sm text-primary-foreground">Knowledge → Prompts → Speed</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 9: Building Next */}
-      <section id="section-9" className="py-16 px-3 md:px-4 gradient-subtle-bg scroll-mt-24">
+      {/* Section 9: Roadmap */}
+      <section id="section-9" className="py-14 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
-            What I'm <span className="gradient-text">Building Next</span>
+          <SectionLabel>Roadmap</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
+            What's <span className="gradient-text">Coming Next</span>
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {[
-              { title: "Aiva Agents", desc: "Separate workers for ads, SEO, email, CRO" },
-              { title: "Knowledge Vault", desc: "Encrypted merchant intelligence, zero-knowledge proofs" },
-              { title: "Aiva Messenger", desc: "Unified WhatsApp/SMS/Messenger/IG hub" },
-              { title: "Pricewatch", desc: "Real-time discount alerts for bargain hunters" },
-              { title: "Growth Loops", desc: "Autonomous growth experiments, fully automated" },
+              { title: "Aiva Agents", desc: "Dedicated workers for ads, SEO, email, CRO" },
+              { title: "Knowledge Vault", desc: "Encrypted intelligence with zero-knowledge proofs" },
+              { title: "Messenger Hub", desc: "Unified WhatsApp/SMS/IG automation" },
+              { title: "Pricewatch", desc: "Real-time discount alerts" },
+              { title: "Growth Loops", desc: "Autonomous experiments" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-4 bg-background border border-border rounded-xl p-4 hover:shadow-md transition-shadow">
-                <span className="w-8 h-8 rounded-lg gradient-bg text-primary-foreground flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</span>
-                <div>
-                  <p className="font-display font-bold text-sm">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">{item.desc}</p>
+              <div key={i} className="flex items-center gap-3 border border-border rounded-lg p-3 bg-card hover:border-primary/20 transition-colors">
+                <span className="w-6 h-6 rounded gradient-bg text-primary-foreground flex items-center justify-center text-[10px] font-bold shrink-0">{i + 1}</span>
+                <div className="flex items-center justify-between flex-1 gap-2">
+                  <p className="font-display font-bold text-xs">{item.title}</p>
+                  <p className="text-[10px] text-muted-foreground hidden sm:block">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -505,23 +484,20 @@ const TheStory = () => {
         </div>
       </section>
 
-      {/* Section 10: Message to Founders */}
-      <section id="section-10" className="py-16 px-3 md:px-4 scroll-mt-24">
+      {/* Section 10: Message */}
+      <section id="section-10" className="py-14 px-3 md:px-4 gradient-subtle-bg scroll-mt-20">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
-            The Message to <span className="gradient-text">Other Founders</span>
+          <SectionLabel>To Founders</SectionLabel>
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-8">
+            You Don't Need <span className="gradient-text">a Team</span>
           </h2>
-          <div className="gradient-subtle-bg border border-border rounded-3xl p-8 md:p-12">
-            <p className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">You don't need a team.</p>
-            <p className="text-muted-foreground text-lg mb-8">You need one good AI partner and relentless execution.</p>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                "A vision that scares you",
-                "The courage to start",
-                "AI tools that multiply 100x",
-              ].map((item, i) => (
-                <div key={i} className="bg-background rounded-xl p-4 border border-border">
-                  <p className="text-sm font-medium text-foreground">{item}</p>
+          <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+            <p className="font-display text-xl font-bold text-foreground mb-2">One AI partner. Relentless execution.</p>
+            <p className="text-sm text-muted-foreground mb-6">That's all it takes now.</p>
+            <div className="grid grid-cols-3 gap-3">
+              {["A scary vision", "Courage to start", "100x AI tools"].map((item, i) => (
+                <div key={i} className="rounded-lg bg-muted/50 p-3">
+                  <p className="text-[11px] font-semibold text-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -529,31 +505,25 @@ const TheStory = () => {
         </div>
       </section>
 
-      {/* Section 11: Conclusion */}
-      <section id="section-11" className="py-20 px-3 md:px-4 scroll-mt-24">
+      {/* Section 11: Conclusion CTA */}
+      <section id="section-11" className="py-16 px-3 md:px-4 scroll-mt-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-8">
-            <span className="gradient-text">Conclusion</span>
-          </h2>
-          <div className="text-center mb-10">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              With AI, a solo founder can outpace entire product teams. A bootstrapper can out-innovate VC-backed companies.
+          <div className="text-center mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              A solo founder can outpace entire teams. A bootstrapper can out-innovate VC-backed companies.
             </p>
-            <p className="font-display text-2xl font-bold text-foreground mb-8">Aiva is proof.</p>
+            <p className="font-display text-2xl font-bold text-foreground">Aiva is proof.</p>
           </div>
 
-          <div className="gradient-bg rounded-3xl p-10 md:p-12 text-center text-primary-foreground">
-            <Rocket className="w-10 h-10 mx-auto mb-4 opacity-80" />
-            <p className="font-display text-xl md:text-2xl font-bold mb-4">
-              Follow Aiva's journey. Follow my journey.
+          <div className="gradient-bg rounded-2xl p-8 md:p-10 text-center text-primary-foreground">
+            <Rocket className="w-8 h-8 mx-auto mb-3 opacity-80" />
+            <p className="font-display text-lg md:text-xl font-bold mb-3">
+              Follow Aiva's journey
             </p>
-            <p className="text-sm opacity-80 max-w-lg mx-auto mb-2">
-              This was her conception story. From a seed in my mind, gestated in just 2 weeks. She's just been born. Ready to find her feet and rapidly master the skills I gave her.
+            <p className="text-xs opacity-70 max-w-md mx-auto mb-1">
+              Her conception story. Born in 2 weeks. Ready to master every skill. Her growth will be rapid. 💥
             </p>
-            <p className="text-lg font-bold mt-4">
-              Her growth spurt will be rapid. 💥
-            </p>
-            <a href="#" className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-3 rounded-full font-semibold mt-6 hover:bg-background/90 transition-colors text-sm">
+            <a href="#" className="inline-flex items-center gap-2 bg-background text-foreground px-6 py-2.5 rounded-full font-semibold mt-5 hover:bg-background/90 transition-colors text-sm">
               Get Early Access <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -561,10 +531,10 @@ const TheStory = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-3 md:px-4">
-        <div className="container mx-auto max-w-4xl flex items-center justify-between">
-          <span className="font-display text-xl font-bold gradient-text">AIVA</span>
-          <span className="text-sm text-muted-foreground">© 2025 Aiva. All rights reserved.</span>
+      <footer className="border-t border-border py-6 px-3 md:px-4">
+        <div className="container mx-auto max-w-3xl flex items-center justify-between">
+          <span className="font-display text-lg font-bold gradient-text">AIVA</span>
+          <span className="text-[11px] text-muted-foreground">© 2025 Aiva. All rights reserved.</span>
         </div>
       </footer>
     </div>
