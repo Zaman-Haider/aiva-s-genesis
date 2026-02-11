@@ -34,6 +34,14 @@ const Navbar = () => {
           >
             Partner Programme
           </Link>
+          <Link
+            to="/subscriptions"
+            className={`font-medium text-sm transition-colors hover:text-primary ${
+              location.pathname === "/subscriptions" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Subscriptions
+          </Link>
           <a
             href="#"
             className="gradient-bg text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"

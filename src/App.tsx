@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Index import karne ki zaroorat nahi agar aap usey use nahi kar rahe
 import TheStory from "./pages/TheStory";
 import PartnerProgramme from "./pages/PartnerProgramme";
+import Subscriptions from "./pages/Subscriptions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           {/* Baqi routes wese hi rahen ge */}
           <Route path="/the-story" element={<TheStory />} />
           <Route path="/partner-programme" element={<PartnerProgramme />} />
+          <Route path="/subscriptions" element={<Subscriptions />} />
           
           {/* 404 handler */}
           <Route path="*" element={<NotFound />} />
