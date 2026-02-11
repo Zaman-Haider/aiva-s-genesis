@@ -42,6 +42,14 @@ const Navbar = () => {
           >
             Subscriptions
           </Link>
+          <Link
+            to="/clawdbot"
+            className={`font-medium text-sm transition-colors hover:text-primary ${
+              location.pathname === "/clawdbot" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Clawdbot
+          </Link>
           <a
             href="#"
             className="gradient-bg text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"

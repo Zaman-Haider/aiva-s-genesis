@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TheStory from "./pages/TheStory";
 import PartnerProgramme from "./pages/PartnerProgramme";
 import Subscriptions from "./pages/Subscriptions";
+import Clawdbot from "./pages/Clawdbot";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/the-story" element={<TheStory />} />
           <Route path="/partner-programme" element={<PartnerProgramme />} />
           <Route path="/subscriptions" element={<Subscriptions />} />
+          <Route path="/clawdbot" element={<Clawdbot />} />
           
           {/* 404 handler */}
           <Route path="*" element={<NotFound />} />
