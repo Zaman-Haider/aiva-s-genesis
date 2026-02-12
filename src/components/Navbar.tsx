@@ -58,22 +58,6 @@ const Navbar = () => {
           >
             Merchants
           </Link>
-          <Link
-            to="/data-usage"
-            className={`font-medium text-sm transition-colors hover:text-primary ${
-              location.pathname === "/data-usage" ? "text-primary" : "text-muted-foreground"
-            }`}
-          >
-            Data Usage
-          </Link>
-          <Link
-            to="/contact"
-            className={`font-medium text-sm transition-colors hover:text-primary ${
-              location.pathname === "/contact" ? "text-primary" : "text-muted-foreground"
-            }`}
-          >
-            Contact
-          </Link>
           <a
             href="#"
             className="gradient-bg text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
