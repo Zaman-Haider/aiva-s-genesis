@@ -33,7 +33,6 @@ const TheStory = () => {
             And Why Traditional Development is Dead
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/60 text-sm mb-6">
-            <span className="flex items-center gap-2"><User className="w-4 h-4" /> Tim Thomas</span>
             <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> Nov 14, 2025</span>
             <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 6-7 min read</span>
           </div>
