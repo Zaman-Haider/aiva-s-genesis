@@ -10,6 +10,7 @@ import Subscriptions from "./pages/Subscriptions";
 import Clawdbot from "./pages/Clawdbot";
 import Merchants from "./pages/Merchants";
 import DataUsage from "./pages/DataUsage";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/clawdbot" element={<Clawdbot />} />
           <Route path="/merchants" element={<Merchants />} />
           <Route path="/data-usage" element={<DataUsage />} />
+          <Route path="/contact" element={<Contact />} />
           
           {/* 404 handler */}
           <Route path="*" element={<NotFound />} />
